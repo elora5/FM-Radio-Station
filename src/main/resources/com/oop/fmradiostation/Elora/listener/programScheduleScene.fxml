@@ -16,7 +16,7 @@
             <Font size="21.0" />
          </font>
       </Label>
-      <Button fx:id="backButtonOnClick" layoutX="23.0" layoutY="19.0" mnemonicParsing="false" text="Back" />
+      <Button fx:id="backButtonOnClick" layoutX="23.0" layoutY="19.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="Back" />
       <ComboBox fx:id="selectStationComboBox" layoutX="114.0" layoutY="81.0" prefWidth="150.0" promptText="Select Station" />
       <Button layoutX="314.0" layoutY="82.0" mnemonicParsing="false" onAction="#loadSceduleButtonOnClick" text="Load Schedule" />
       <TableView fx:id="programListTableView" layoutX="36.0" layoutY="129.0" prefHeight="164.0" prefWidth="543.0">

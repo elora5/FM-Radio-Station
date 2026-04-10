@@ -22,7 +22,7 @@
       <ComboBox fx:id="adTypeComboBox" layoutX="300.0" layoutY="73.0" prefHeight="26.0" prefWidth="174.0" promptText="Advertisement Type" />
       <TextField fx:id="amountField" alignment="CENTER" layoutX="73.0" layoutY="128.0" promptText="Amount" />
       <TextField fx:id="adNaneField" alignment="CENTER" layoutX="73.0" layoutY="73.0" promptText="Advertisement Name" />
-      <DatePicker layoutX="300.0" layoutY="128.0" />
+      <DatePicker fx:id="revenueDatePicker" layoutX="300.0" layoutY="128.0" />
       <Button layoutX="138.0" layoutY="187.0" mnemonicParsing="false" onAction="#resetButtonOnClick" prefHeight="26.0" prefWidth="66.0" text="Reset" />
       <Button layoutX="300.0" layoutY="187.0" mnemonicParsing="false" onAction="#saveRevenueButtonOnClick" text="Save Revenue" />
       <TextArea fx:id="messageLabel" layoutX="153.0" layoutY="270.0" prefHeight="51.0" prefWidth="232.0" />
