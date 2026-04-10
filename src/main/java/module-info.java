@@ -2,6 +2,7 @@ module com.oop.fmradiostation {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.graphics;
+    requires java.desktop;
 
 
     opens com.oop.fmradiostation to javafx.fxml;

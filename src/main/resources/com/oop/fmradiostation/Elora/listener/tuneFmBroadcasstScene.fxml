@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.fmradiostation.Elora.listener.TuneFmBroadcastSceneController">
+   <children>
+      <Label layoutX="202.0" layoutY="9.0" style="-fx-background-color: magenta;" text="Tune Live Broadcast" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="72.0" text="Select Radio Frequency" />
+      <ComboBox fx:id="stationListComboBox" layoutX="232.0" layoutY="68.0" prefWidth="150.0" promptText="Station List" />
+      <Button fx:id="tuneInButtonOnClick" layoutX="432.0" layoutY="69.0" mnemonicParsing="false" text="Tune In" />
+      <Button layoutX="14.0" layoutY="24.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="Back" />
+      <Label layoutX="57.0" layoutY="142.0" style="-fx-background-color: pink;" text="Broadcast Info" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="currentProgramTextField" alignment="CENTER" layoutX="51.0" layoutY="187.0" promptText="Current Program" />
+      <TextField fx:id="rjNameTextField" alignment="CENTER" layoutX="232.0" layoutY="187.0" promptText="RJ Name" />
+      <TextField fx:id="broadcastStatusTextField" alignment="CENTER" layoutX="410.0" layoutY="187.0" promptText="Broadcast Status" />
+      <TextArea fx:id="messageTextArea" layoutX="200.0" layoutY="281.0" prefHeight="79.0" prefWidth="200.0" />
+      <Label layoutX="277.0" layoutY="264.0" text="Message" />
+   </children>
+</AnchorPane>

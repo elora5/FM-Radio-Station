@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.fmradiostation.Elora.listener.ListenerDashboardSceneController">
+   <children>
+      <Label layoutX="191.0" layoutY="14.0" prefHeight="27.0" prefWidth="178.0" style="-fx-background-color: violet;" text="Listener Dashboard" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#logoutButtonOnClick" style="-fx-background-color: orange;" text="Logout" textFill="WHITE" />
+      <Button layoutX="59.0" layoutY="90.0" mnemonicParsing="false" onAction="#tuneLiveButtonOnClick" prefHeight="29.0" prefWidth="178.0" style="-fx-background-color: blue;" text="Tune Live Broadcast " textFill="#f8f8f8">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="59.0" layoutY="136.0" mnemonicParsing="false" onAction="#programScheduleButtonOnClick" prefHeight="29.0" prefWidth="178.0" style="-fx-background-color: blue;" text="Program Schedule" textFill="#f8f8f8">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="59.0" layoutY="189.0" mnemonicParsing="false" onAction="#sendRequestButtonOnClick" prefHeight="29.0" prefWidth="178.0" style="-fx-background-color: blue;" text="Send Request / Message" textFill="#f8f8f8">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="58.0" layoutY="240.0" mnemonicParsing="false" onAction="#poolsButtonOnClick" prefHeight="29.0" prefWidth="178.0" style="-fx-background-color: blue;" text="Polls  / Contests" textFill="#f8f8f8">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="350.0" layoutY="90.0" mnemonicParsing="false" onAction="#createButtonOnClick" prefHeight="29.0" prefWidth="178.0" style="-fx-background-color: blue;" text="Create / Edit Profile" textFill="#f8f8f8">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="350.0" layoutY="136.0" mnemonicParsing="false" onAction="#setReminderButtonOnClick" prefHeight="29.0" prefWidth="178.0" style="-fx-background-color: blue;" text="Set Reminder" textFill="#f8f8f8">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="350.0" layoutY="189.0" mnemonicParsing="false" onAction="#rateShowButtonOnClick" prefHeight="29.0" prefWidth="178.0" style="-fx-background-color: blue;" text="Rate Show/ Feedback" textFill="#f8f8f8">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="349.0" layoutY="240.0" mnemonicParsing="false" onAction="#programButtonOnClick" prefHeight="29.0" prefWidth="178.0" style="-fx-background-color: blue;" text="Program History" textFill="#f8f8f8">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
