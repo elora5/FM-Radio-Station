@@ -18,7 +18,7 @@ public class ListenerDashboardSceneController
 
     @javafx.fxml.FXML
     public void tuneLiveButtonOnClick(ActionEvent actionEvent) throws IOException {
-        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("com/oop/fmradiostation/Elora/listener/tuneFmBroadcasstScene.fxml")));
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Elora/listener/tuneFmBroadcasstScene.fxml")));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.setTitle("Tune FM");
@@ -28,7 +28,7 @@ public class ListenerDashboardSceneController
 
     @javafx.fxml.FXML
     public void programScheduleButtonOnClick(ActionEvent actionEvent) throws IOException {
-        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("com/oop/fmradiostation/Elora/listener/programScheduleScene.fxml")));
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Elora/listener/programScheduleScene.fxml")));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.setTitle("Program Schedule");
@@ -50,7 +50,7 @@ public class ListenerDashboardSceneController
 
     @javafx.fxml.FXML
     public void poolsButtonOnClick(ActionEvent actionEvent) throws IOException {
-        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("com/oop/fmradiostation/Elora/listener/pollsOrContestScene.fxml")));
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Elora/listener/pollsOrContestScene.fxml")));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.setTitle("Pools or Contest");
@@ -64,7 +64,7 @@ public class ListenerDashboardSceneController
 
     @javafx.fxml.FXML
     public void sendRequestButtonOnClick(ActionEvent actionEvent) throws IOException {
-        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("com/oop/fmradiostation/Elora/listener/sendRequestScene.fxml")));
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Elora/listener/sendRequestScene.fxml")));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.setTitle("Song Request");

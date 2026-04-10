@@ -25,10 +25,11 @@ public class LoginSceneController {
     @javafx.fxml.FXML
     void initialize() {
         userTypeComboBox.setValue("Select User Type");
-        userTypeComboBox.getItems().addAll("Customer","Accounts & Finance Officer",
-                                            "Customer Service Executive","Operation Manager",
-                                                "Admin","HRM",
-                                                "Hotel Manager","Tour Agent");
+        userTypeComboBox.getItems().addAll("Production Manager","Radio Jockey",
+                                            "Station Manager","Marketing Executive",
+                                                "Listener","Finance Officer",
+                                                    "Sound Engineer","Studio Coordinator",
+                                                        "Admin");
 
     }
 
@@ -51,22 +52,22 @@ public class LoginSceneController {
         LoginValidationAndVerification loginValidationAndVerification = new LoginValidationAndVerification();
         if (loginValidationAndVerification.validateEmailOrId(emailOrUserId) && loginValidationAndVerification.validatePassword(password)) {
             Parent dashboardScene = switch (userType) {
-                case "Customer" ->
-                        FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Elora/listener/customerDashboardScene.fxml")));
-                case "Accounts & Finance Officer" ->
-                        FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Elora/finance_officer/financeOfficerDashboardScene.fxml")));
-                case "Customer Service Executive" ->
-                        FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Das/sound_engineer/soundEngineerDashboardScene.fxml")));
-                case "Operation Manager" ->
-                        FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Das/studio_coordinator/soundCoordinatorDashboardScene.fxml")));
-                case "Admin" ->
+                case "Production Manager" ->
                         FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Sabbir/production_manager/productionManagerDashboardScene.fxml")));
-                case "HRM" ->
+                case "Radio Jockey" ->
                         FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Sabbir/radio_jockey/radioJockeyDashboardScene.fxml")));
-                case "Hotel Manager" ->
-                        FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Paul/hotelManager/stationManagerDashboardScene.fxml")));
-                case "Tour Agent" ->
-                        FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Paul/tourAgent/marketingExecutiveDashboardScene.fxml")));
+                case "Station Manager" ->
+                        FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Paul/station_manager/stationManagerDashboardScene.fxml")));
+                case "Marketing Executive" ->
+                        FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Paul/marketing_executive/marketingExecutiveDashboardScene.fxml")));
+                case "Listener" ->
+                        FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Elora/listener/listenerDashboardScene.fxml")));
+                case "Finance Officer" ->
+                        FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Elora/finance_officer/financeOfficerDashboardScene.fxml")));
+                case "Sound Engineer" ->
+                        FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Das/sound_engineer/soundEngineerDashboardScene.fxml")));
+                case "Studio Coordinator" ->
+                        FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Das/studio_coordinator/soundCoordinatorDashboardScene.fxml")));
                 default -> throw new IllegalArgumentException("Invalid user type: " + userType);
             };
             Scene scene = new Scene(dashboardScene);
