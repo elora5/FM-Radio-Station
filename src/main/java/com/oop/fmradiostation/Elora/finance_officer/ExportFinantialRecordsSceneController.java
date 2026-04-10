@@ -4,4 +4,5 @@ public class ExportFinantialRecordsSceneController
 {
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+    }
+}
