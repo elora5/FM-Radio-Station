@@ -37,15 +37,33 @@ public class ListenerDashboardSceneController
     }
 
     @javafx.fxml.FXML
-    public void setReminderButtonOnClick(ActionEvent actionEvent) {
+    public void setReminderButtonOnClick(ActionEvent actionEvent) throws IOException {
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Elora/listener/set_reminder.fxml")));
+        Scene scene2 = new Scene(scene2Parent);
+        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        window.setTitle("Set Reminder");
+        window.setScene(scene2);
+        window.show();
     }
 
     @javafx.fxml.FXML
-    public void createButtonOnClick(ActionEvent actionEvent) {
+    public void createButtonOnClick(ActionEvent actionEvent) throws IOException {
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Elora/listener/createandEditprofile.fxml")));
+        Scene scene2 = new Scene(scene2Parent);
+        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        window.setTitle("Create / Edit Profile");
+        window.setScene(scene2);
+        window.show();
     }
 
     @javafx.fxml.FXML
-    public void programButtonOnClick(ActionEvent actionEvent) {
+    public void programButtonOnClick(ActionEvent actionEvent) throws IOException {
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Elora/listener/Program_History.fxml")));
+        Scene scene2 = new Scene(scene2Parent);
+        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        window.setTitle("Program History");
+        window.setScene(scene2);
+        window.show();
     }
 
     @javafx.fxml.FXML
@@ -59,7 +77,13 @@ public class ListenerDashboardSceneController
     }
 
     @javafx.fxml.FXML
-    public void rateShowButtonOnClick(ActionEvent actionEvent) {
+    public void rateShowButtonOnClick(ActionEvent actionEvent) throws IOException {
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Elora/listener/Rate Show_Feedback.fxml")));
+        Scene scene2 = new Scene(scene2Parent);
+        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        window.setTitle("Rate Show / Feedback");
+        window.setScene(scene2);
+        window.show();
     }
 
     @javafx.fxml.FXML

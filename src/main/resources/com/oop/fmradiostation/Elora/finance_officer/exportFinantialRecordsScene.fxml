@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="951.0" style="-fx-background-color: linear-gradient(to bottom right, #ffe6f0, #fff5f8);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.fmradiostation.Elora.finance_officer.ExportFinantialRecordsSceneController">
+<AnchorPane prefHeight="720.0" prefWidth="951.0" style="-fx-background-color: linear-gradient(to bottom right, #ffe6f0, #fff5f8);" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.fmradiostation.Elora.finance_officer.ExportFinantialRecordsSceneController">
 
     <children>
 
@@ -45,13 +45,13 @@
                 <Label layoutX="545.0" layoutY="70.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="Record Type:" />
                 <ComboBox fx:id="recordTypeComboBox" layoutX="640.0" layoutY="65.0" prefHeight="30.0" prefWidth="180.0" promptText="Select type" style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <Button fx:id="filterButton" layoutX="180.0" layoutY="103.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #f78fb3; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="Filter" />
+                <Button layoutX="180.0" layoutY="103.0" onAction="#filterButtonOnClick" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #f78fb3; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="Filter" />
 
-                <Button fx:id="loadAllButton" layoutX="320.0" layoutY="103.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #f8a5c2; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="Load All" />
+                <Button layoutX="320.0" layoutY="103.0" onAction="#loadAllButtonOnClick" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #f8a5c2; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="Load All" />
 
-                <Button fx:id="printButton" layoutX="619.0" layoutY="103.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #c44569; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="Print" />
+                <Button layoutX="619.0" layoutY="103.0" onAction="#printButtonOnClick" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #c44569; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="Print" />
 
-                <Button fx:id="backButton" layoutX="770.0" layoutY="103.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #b03060; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="Back" />
+                <Button layoutX="770.0" layoutY="103.0" onAction="#backButtonOnClick" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #b03060; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="Back" />
 
             </children>
         </AnchorPane>

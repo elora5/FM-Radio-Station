@@ -33,7 +33,7 @@ public class FinanceOfficerDashboardSceneController {
 
     @javafx.fxml.FXML
     public void monitorAdvertisementPaymentButtonOnClick(ActionEvent actionEvent) throws IOException {
-        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Elora/finance_officer/monitorAdvertisementPaymentScene.fxml")));
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Elora/finance_officer/monitorAdvertisementScene.fxml")));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         window.setTitle("Monitor Advertisement Payment");

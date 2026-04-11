@@ -6,6 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
@@ -35,11 +36,14 @@ public class PollsOrContestSceneController
     private final List<PollTemplate> pollTemplates = new ArrayList<>();
     private final Random random = new Random();
     private int submissionCounter = 1;
+    @javafx.fxml.FXML
+    private ComboBox<String> radioStationComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
         yesRadioButton.setToggleGroup(responseToggleGroup);
         noRadioButton.setToggleGroup(responseToggleGroup);
+        seedStations();
         seedPollTemplates();
         loadRandomPollData();
         clearResponseSelection();
@@ -49,6 +53,16 @@ public class PollsOrContestSceneController
     public void submitButtonOnClick(ActionEvent actionEvent) {
         String title = pollsContestTitleTextField.getText() == null ? "" : pollsContestTitleTextField.getText().trim();
         String description = pollsContestDescriptionTextField.getText() == null ? "" : pollsContestDescriptionTextField.getText().trim();
+        String station = radioStationComboBox.getValue();
+
+        if (station == null || station.isBlank()) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Missing Station");
+            alert.setHeaderText("Please choose a radio station");
+            alert.setContentText("Select a station from the list before submitting.");
+            alert.showAndWait();
+            return;
+        }
 
         if (title.isEmpty() || description.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -85,6 +99,7 @@ public class PollsOrContestSceneController
         alert.setTitle("Submitted");
         alert.setHeaderText("Poll/Contest response submitted successfully");
         alert.setContentText("ID: " + submission.getSubmissionId()
+                + "\nStation: " + station
                 + "\nResponse: " + submission.getResponse()
                 + "\nTime: " + submission.getSubmittedAt()
                 + "\nTotal submissions this session: " + submissions.size());
@@ -115,6 +130,16 @@ public class PollsOrContestSceneController
         pollTemplates.add(new PollTemplate("Retro Hour", "Would you like a dedicated retro songs program every Thursday?"));
         pollTemplates.add(new PollTemplate("RJ Challenge", "Should listeners challenge RJ with rapid-fire questions this week?"));
         pollTemplates.add(new PollTemplate("Sports Talk Special", "Do you want a post-match fan call-in show tonight?"));
+    }
+
+    private void seedStations() {
+        radioStationComboBox.getItems().setAll(
+                "FM 88.0 - City Beats",
+                "FM 91.6 - Pop Pulse",
+                "FM 94.2 - Retro Gold",
+                "FM 99.4 - Night Vibes"
+        );
+        radioStationComboBox.getSelectionModel().selectFirst();
     }
 
     private void clearResponseSelection() {

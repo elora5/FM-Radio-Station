@@ -1,144 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="560.0" prefWidth="860.0"
-            style="-fx-background-color: linear-gradient(to bottom right, #ffe4ec, #fff7fb);"
-            xmlns="http://javafx.com/javafx/17"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.oop.fmradiostation.Elora.listener.SetReminderController">
+<AnchorPane prefHeight="560.0" prefWidth="860.0" style="-fx-background-color: linear-gradient(to bottom right, #ffe4ec, #fff7fb);" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.fmradiostation.Elora.listener.SetReminderController">
 
     <children>
 
-        <Label layoutX="310.0" layoutY="15.0" text="⏰ Set Reminder"
-               style="-fx-text-fill: #b03060; -fx-font-weight: bold;">
+        <Label layoutX="310.0" layoutY="15.0" style="-fx-text-fill: #b03060; -fx-font-weight: bold;" text="⏰ Set Reminder">
             <font>
-                <Font size="25.0"/>
+                <Font size="25.0" />
             </font>
         </Label>
 
         <!-- Left panel -->
-        <AnchorPane layoutX="20.0" layoutY="55.0" prefHeight="475.0" prefWidth="360.0"
-                    style="-fx-background-color: white; -fx-border-color: #f4a6c1; -fx-border-width: 2; -fx-border-radius: 18; -fx-background-radius: 18;">
+        <AnchorPane layoutX="20.0" layoutY="55.0" prefHeight="475.0" prefWidth="360.0" style="-fx-background-color: white; -fx-border-color: #f4a6c1; -fx-border-width: 2; -fx-border-radius: 18; -fx-background-radius: 18;">
             <children>
 
-                <Label layoutX="20.0" layoutY="18.0" text="💖 Reminder Details"
-                       style="-fx-text-fill: #c2185b; -fx-font-weight: bold;">
+                <Label layoutX="20.0" layoutY="18.0" style="-fx-text-fill: #c2185b; -fx-font-weight: bold;" text="💖 Reminder Details">
                     <font>
-                        <Font size="18.0"/>
+                        <Font size="18.0" />
                     </font>
                 </Label>
 
-                <Separator layoutX="18.0" layoutY="48.0" prefWidth="320.0"/>
+                <Separator layoutX="18.0" layoutY="48.0" prefWidth="320.0" />
 
-                <Label layoutX="25.0" layoutY="68.0" text="🔖 Reminder ID:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <TextField fx:id="reminderIdTextField" layoutX="145.0" layoutY="63.0" prefHeight="30.0" prefWidth="180.0"
-                           promptText="Enter ID"
-                           style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                <Label layoutX="25.0" layoutY="68.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="🔖 Reminder ID:" />
+                <TextField fx:id="reminderIdTextField" layoutX="145.0" layoutY="63.0" prefHeight="30.0" prefWidth="180.0" promptText="Enter ID" style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <Label layoutX="25.0" layoutY="113.0" text="📻 Program Name:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <ComboBox fx:id="programComboBox" layoutX="145.0" layoutY="108.0" prefHeight="30.0" prefWidth="180.0"
-                          promptText="Select program"
-                          style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                <Label layoutX="25.0" layoutY="113.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="📻 Program Name:" />
+                <ComboBox fx:id="programComboBox" layoutX="145.0" layoutY="108.0" prefHeight="30.0" prefWidth="180.0" promptText="Select program" style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <Label layoutX="25.0" layoutY="158.0" text="📅 Reminder Date:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <DatePicker fx:id="reminderDatePicker" layoutX="145.0" layoutY="153.0" prefHeight="30.0" prefWidth="180.0"
-                            style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                <Label layoutX="25.0" layoutY="158.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="📅 Reminder Date:" />
+                <DatePicker fx:id="reminderDatePicker" layoutX="145.0" layoutY="153.0" prefHeight="30.0" prefWidth="180.0" style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <Label layoutX="25.0" layoutY="203.0" text="⌚ Time Slot:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <ComboBox fx:id="timeSlotComboBox" layoutX="145.0" layoutY="198.0" prefHeight="30.0" prefWidth="180.0"
-                          promptText="Select time"
-                          style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                <Label layoutX="25.0" layoutY="203.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="⌚ Time Slot:" />
+                <ComboBox fx:id="timeSlotComboBox" layoutX="145.0" layoutY="198.0" prefHeight="30.0" prefWidth="180.0" promptText="Select time" style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <Label layoutX="25.0" layoutY="248.0" text="🔁 Repeat Mode:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <RadioButton fx:id="onceRadioButton" layoutX="145.0" layoutY="248.0" text="Once"
-                             style="-fx-text-fill: #7a294f;"/>
-                <RadioButton fx:id="dailyRadioButton" layoutX="210.0" layoutY="248.0" text="Daily"
-                             style="-fx-text-fill: #7a294f;"/>
-                <RadioButton fx:id="weeklyRadioButton" layoutX="275.0" layoutY="248.0" text="Weekly"
-                             style="-fx-text-fill: #7a294f;"/>
+                <Label layoutX="25.0" layoutY="248.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="🔁 Repeat Mode:" />
+                <RadioButton fx:id="onceRadioButton" layoutX="145.0" layoutY="248.0" style="-fx-text-fill: #7a294f;" text="Once" />
+                <RadioButton fx:id="dailyRadioButton" layoutX="210.0" layoutY="248.0" style="-fx-text-fill: #7a294f;" text="Daily" />
+                <RadioButton fx:id="weeklyRadioButton" layoutX="275.0" layoutY="248.0" style="-fx-text-fill: #7a294f;" text="Weekly" />
 
-                <Label layoutX="25.0" layoutY="293.0" text="✨ Notify By:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <CheckBox fx:id="popupCheckBox" layoutX="145.0" layoutY="293.0" text="Popup"
-                          style="-fx-text-fill: #7a294f;"/>
-                <CheckBox fx:id="soundCheckBox" layoutX="215.0" layoutY="293.0" text="Sound"
-                          style="-fx-text-fill: #7a294f;"/>
-                <CheckBox fx:id="emailCheckBox" layoutX="285.0" layoutY="293.0" text="Email"
-                          style="-fx-text-fill: #7a294f;"/>
+                <Label layoutX="25.0" layoutY="293.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="✨ Notify By:" />
+                <CheckBox fx:id="popupCheckBox" layoutX="145.0" layoutY="293.0" style="-fx-text-fill: #7a294f;" text="Popup" />
+                <CheckBox fx:id="soundCheckBox" layoutX="215.0" layoutY="293.0" style="-fx-text-fill: #7a294f;" text="Sound" />
+                <CheckBox fx:id="emailCheckBox" layoutX="285.0" layoutY="293.0" style="-fx-text-fill: #7a294f;" text="Email" />
 
-                <Label layoutX="25.0" layoutY="338.0" text="📝 Note:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <TextArea fx:id="noteTextArea" layoutX="145.0" layoutY="333.0" prefHeight="80.0" prefWidth="180.0"
-                          promptText="Reminder note..."
-                          style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                <Label layoutX="25.0" layoutY="338.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="📝 Note:" />
+                <TextArea fx:id="noteTextArea" layoutX="145.0" layoutY="333.0" prefHeight="80.0" prefWidth="180.0" promptText="Reminder note..." style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <Button fx:id="saveButton" layoutX="35.0" layoutY="430.0" prefHeight="30.0" prefWidth="80.0" text="💾 Save"
-                        style="-fx-background-color: #ec5f9e; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button layoutX="35.0" layoutY="430.0" onAction="#saveButtonOnClick" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #ec5f9e; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="💾 Save" />
 
-                <Button fx:id="updateButton" layoutX="130.0" layoutY="430.0" prefHeight="30.0" prefWidth="90.0" text="✏ Update"
-                        style="-fx-background-color: #d63384; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button layoutX="130.0" layoutY="430.0" onAction="#updateButtonOnClick" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #d63384; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="✏ Update" />
 
-                <Button fx:id="clearButton" layoutX="235.0" layoutY="430.0" prefHeight="30.0" prefWidth="80.0" text="🧹 Clear"
-                        style="-fx-background-color: #f78fb3; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button layoutX="235.0" layoutY="430.0" onAction="#clearButtonOnClick" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #f78fb3; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="🧹 Clear" />
 
             </children>
         </AnchorPane>
 
         <!-- Right panel -->
-        <AnchorPane layoutX="400.0" layoutY="55.0" prefHeight="475.0" prefWidth="440.0"
-                    style="-fx-background-color: white; -fx-border-color: #f4a6c1; -fx-border-width: 2; -fx-border-radius: 18; -fx-background-radius: 18;">
+        <AnchorPane layoutX="400.0" layoutY="55.0" prefHeight="475.0" prefWidth="440.0" style="-fx-background-color: white; -fx-border-color: #f4a6c1; -fx-border-width: 2; -fx-border-radius: 18; -fx-background-radius: 18;">
             <children>
 
-                <Label layoutX="20.0" layoutY="18.0" text="📋 Upcoming Reminders"
-                       style="-fx-text-fill: #c2185b; -fx-font-weight: bold;">
+                <Label layoutX="20.0" layoutY="18.0" style="-fx-text-fill: #c2185b; -fx-font-weight: bold;" text="📋 Upcoming Reminders">
                     <font>
-                        <Font size="18.0"/>
+                        <Font size="18.0" />
                     </font>
                 </Label>
 
-                <Separator layoutX="18.0" layoutY="48.0" prefWidth="400.0"/>
+                <Separator layoutX="18.0" layoutY="48.0" prefWidth="400.0" />
 
                 <TableView fx:id="reminderTableView" layoutX="20.0" layoutY="65.0" prefHeight="230.0" prefWidth="395.0">
                     <columns>
-                        <TableColumn fx:id="idColumn" prefWidth="55.0" text="ID"/>
-                        <TableColumn fx:id="programColumn" prefWidth="110.0" text="Program"/>
-                        <TableColumn fx:id="dateColumn" prefWidth="85.0" text="Date"/>
-                        <TableColumn fx:id="timeColumn" prefWidth="75.0" text="Time"/>
-                        <TableColumn fx:id="repeatColumn" prefWidth="70.0" text="Repeat"/>
+                        <TableColumn fx:id="idColumn" prefWidth="55.0" text="ID" />
+                        <TableColumn fx:id="programColumn" prefWidth="110.0" text="Program" />
+                        <TableColumn fx:id="dateColumn" prefWidth="85.0" text="Date" />
+                        <TableColumn fx:id="timeColumn" prefWidth="75.0" text="Time" />
+                        <TableColumn fx:id="repeatColumn" prefWidth="70.0" text="Repeat" />
                     </columns>
                 </TableView>
 
-                <Label layoutX="20.0" layoutY="315.0" text="🌸 Reminder Preview"
-                       style="-fx-text-fill: #c2185b; -fx-font-weight: bold;">
+                <Label layoutX="20.0" layoutY="315.0" style="-fx-text-fill: #c2185b; -fx-font-weight: bold;" text="🌸 Reminder Preview">
                     <font>
-                        <Font size="17.0"/>
+                        <Font size="17.0" />
                     </font>
                 </Label>
 
-                <TextArea fx:id="previewTextArea" layoutX="20.0" layoutY="345.0" prefHeight="70.0" prefWidth="395.0"
-                          editable="false"
-                          promptText="Selected reminder preview..."
-                          style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 10; -fx-background-radius: 10;"/>
+                <TextArea fx:id="previewTextArea" editable="false" layoutX="20.0" layoutY="345.0" prefHeight="70.0" prefWidth="395.0" promptText="Selected reminder preview..." style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 10; -fx-background-radius: 10;" />
 
-                <Button fx:id="loadButton" layoutX="40.0" layoutY="430.0" prefHeight="30.0" prefWidth="85.0" text="📂 Load"
-                        style="-fx-background-color: #f8a5c2; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button layoutX="40.0" layoutY="430.0" onAction="#loadButtonOnClick" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #f8a5c2; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="📂 Load" />
 
-                <Button fx:id="deleteButton" layoutX="145.0" layoutY="430.0" prefHeight="30.0" prefWidth="90.0" text="🗑 Delete"
-                        style="-fx-background-color: #ff6b9a; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button layoutX="145.0" layoutY="430.0" onAction="#deleteButtonOnClick" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #ff6b9a; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="🗑 Delete" />
 
-                <Button fx:id="activateButton" layoutX="255.0" layoutY="430.0" prefHeight="30.0" prefWidth="90.0" text="🔔 Active"
-                        style="-fx-background-color: #ff85b3; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button layoutX="255.0" layoutY="430.0" onAction="#activateButtonOnClick" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #ff85b3; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="🔔 Active" />
 
-                <Button fx:id="backButton" layoutX="360.0" layoutY="430.0" prefHeight="30.0" prefWidth="55.0" text="⬅"
-                        style="-fx-background-color: #c44569; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button layoutX="360.0" layoutY="430.0" onAction="#backButtonOnClick" prefHeight="30.0" prefWidth="55.0" style="-fx-background-color: #c44569; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="Back" />
 
             </children>
         </AnchorPane>

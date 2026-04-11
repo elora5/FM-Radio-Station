@@ -6,6 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -31,9 +32,12 @@ public class SendRequestSceneController
 
     private final List<SongRequest> submittedRequests = new ArrayList<>();
     private int requestCounter = 1;
+    @javafx.fxml.FXML
+    private ComboBox<String> stationListComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
+        seedStations();
         listenerNameTextField.clear();
         songNameTextField.clear();
         messa.clear();
@@ -53,6 +57,16 @@ public class SendRequestSceneController
         String listenerName = listenerNameTextField.getText() == null ? "" : listenerNameTextField.getText().trim();
         String songName = songNameTextField.getText() == null ? "" : songNameTextField.getText().trim();
         String message = messa.getText() == null ? "" : messa.getText().trim();
+        String station = stationListComboBox.getValue();
+
+        if (station == null || station.isBlank()) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Missing Station");
+            alert.setHeaderText("Please choose a station first");
+            alert.setContentText("Select a station from the Station List.");
+            alert.showAndWait();
+            return;
+        }
 
         if (listenerName.isEmpty() || songName.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -74,9 +88,19 @@ public class SendRequestSceneController
         alert.setTitle("Request Submitted");
         alert.setHeaderText("Your request has been submitted successfully");
         alert.setContentText("ID: " + request.getRequestId() + "\nListener: " + request.getListenerName() +
-                "\nSong: " + request.getSongName() + "\nTime: " + request.getSubmittedAt() +
+                "\nSong: " + request.getSongName() + "\nStation: " + station + "\nTime: " + request.getSubmittedAt() +
                 "\nTotal requests this session: " + submittedRequests.size());
         alert.showAndWait();
+    }
+
+    private void seedStations() {
+        stationListComboBox.getItems().setAll(
+                "FM 88.0 - City Beats",
+                "FM 91.6 - Pop Pulse",
+                "FM 94.2 - Retro Gold",
+                "FM 99.4 - Night Vibes"
+        );
+        stationListComboBox.getSelectionModel().selectFirst();
     }
 
     @javafx.fxml.FXML
