@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="680.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.fmradiostation.Das.sound_engineer.UploadAudioController">
+    <children>
+
+        <VBox layoutX="30.0" layoutY="80.0" prefHeight="300.0" prefWidth="200.0" spacing="15.0">
+            <children>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="File ID:" />
+                        <TextField fx:id="fileIdField" promptText="e.g., AF001" />
+                    </children>
+                </VBox>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="File Name:" />
+                        <TextField fx:id="fileNameField" promptText="e.g., IntroMusic" />
+                    </children>
+                </VBox>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="File Format:" />
+                        <ComboBox fx:id="formatComboBox" prefWidth="200.0" promptText="Select Format" />
+                    </children>
+                </VBox>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Duration (Minutes):" />
+                        <TextField fx:id="durationField" promptText="e.g., 3.5" />
+                    </children>
+                </VBox>
+                <Button mnemonicParsing="false" onAction="#handleUploadFile" prefHeight="35.0" prefWidth="200.0" text="Upload File">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Label fx:id="statusLabel" textFill="#e74c3c" wrapText="true" />
+            </children>
+        </VBox>
+
+        <TableView fx:id="audioTable" layoutX="260.0" layoutY="80.0" prefHeight="480.0" prefWidth="390.0">
+            <columns>
+                <TableColumn fx:id="idCol" prefWidth="60.0" text="ID" />
+                <TableColumn fx:id="nameCol" prefWidth="150.0" text="File Name" />
+                <TableColumn fx:id="formatCol" prefWidth="70.0" text="Format" />
+                <TableColumn fx:id="durationCol" prefWidth="100.0" text="Duration (m)" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
