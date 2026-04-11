@@ -67,7 +67,7 @@ public class LoginSceneController {
                 case "Sound Engineer" ->
                         FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Das/sound_engineer/soundEngineerDashboardScene.fxml")));
                 case "Studio Coordinator" ->
-                        FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Das/studio_coordinator/soundCoordinatorDashboardScene.fxml")));
+                        FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/oop/fmradiostation/Das/studio_coordinator/studioCoordinatorDashboardScene.fxml")));
                 default -> throw new IllegalArgumentException("Invalid user type: " + userType);
             };
             Scene scene = new Scene(dashboardScene);
