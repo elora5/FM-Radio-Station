@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.fmradiostation.Sabbir.radio_jockey.SongController">
+   <children>
+      <TextField layoutX="158.0" layoutY="51.0" />
+      <TextField layoutX="158.0" layoutY="104.0" />
+      <TextField layoutX="158.0" layoutY="162.0" />
+      <Text layoutX="71.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SongName:" />
+      <Text layoutX="102.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artist:" />
+      <Text layoutX="82.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration:" />
+      <Button layoutX="142.0" layoutY="256.0" mnemonicParsing="false" text="Save" />
+      <Button layoutX="256.0" layoutY="256.0" mnemonicParsing="false" text="Clear" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.fmradiostation.Sabbir.radio_jockey.PlaylistController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="64.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Songs">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField layoutX="132.0" layoutY="81.0" />
+      <TextField layoutX="133.0" layoutY="118.0" />
+      <TextField layoutX="133.0" layoutY="156.0" />
+      <Text layoutX="43.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Song Name:" />
+      <Text layoutX="76.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artist:" />
+      <Text layoutX="67.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration:" />
+      <Button layoutX="389.0" layoutY="81.0" mnemonicParsing="false" text="Add Song" />
+      <Button layoutX="389.0" layoutY="126.0" mnemonicParsing="false" text="Remove" />
+      <Button layoutX="318.0" layoutY="315.0" mnemonicParsing="false" text="Play" />
+   </children>
+</AnchorPane>
