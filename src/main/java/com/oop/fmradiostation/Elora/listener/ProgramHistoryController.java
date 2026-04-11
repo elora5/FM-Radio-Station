@@ -32,8 +32,6 @@ public class ProgramHistoryController
     @javafx.fxml.FXML
     private TextField totalProgramsTextField;
     @javafx.fxml.FXML
-    private DatePicker toDatePicker;
-    @javafx.fxml.FXML
     private TableColumn<ProgramHistoryEntry, String> categoryColumn;
     @javafx.fxml.FXML
     private TextArea summaryTextArea;
@@ -80,7 +78,7 @@ public class ProgramHistoryController
         categoryComboBox.setValue("All");
         searchProgramTextField.clear();
         fromDatePicker.setValue(null);
-        toDatePicker.setValue(null);
+        
         clearDetails();
         renderTableAndStats(allPrograms, "Loaded full program history.");
     }
@@ -116,7 +114,6 @@ public class ProgramHistoryController
     public void clearButtonOnClick(ActionEvent actionEvent) {
         searchProgramTextField.clear();
         fromDatePicker.setValue(null);
-        toDatePicker.setValue(null);
         categoryComboBox.setValue("All");
         clearDetails();
         summaryTextArea.clear();
@@ -149,12 +146,6 @@ public class ProgramHistoryController
         String keyword = searchProgramTextField.getText() == null ? "" : searchProgramTextField.getText().trim().toLowerCase();
         String category = categoryComboBox.getValue() == null ? "All" : categoryComboBox.getValue();
         LocalDate fromDate = fromDatePicker.getValue();
-        LocalDate toDate = toDatePicker.getValue();
-
-        if (fromDate != null && toDate != null && fromDate.isAfter(toDate)) {
-            showAlert(Alert.AlertType.ERROR, "Invalid Date Range", "From date cannot be after To date.");
-            return;
-        }
 
         List<ProgramHistoryEntry> filtered = allPrograms.stream()
                 .filter(entry -> "All".equals(category) || entry.getCategory().equalsIgnoreCase(category))
@@ -162,8 +153,7 @@ public class ProgramHistoryController
                         || entry.getProgramName().toLowerCase().contains(keyword)
                         || entry.getHostName().toLowerCase().contains(keyword)
                         || entry.getSummary().toLowerCase().contains(keyword))
-                .filter(entry -> (fromDate == null || !entry.getAirDate().isBefore(fromDate))
-                        && (toDate == null || !entry.getAirDate().isAfter(toDate)))
+                .filter(entry -> fromDate == null || !entry.getAirDate().isBefore(fromDate))
                 .collect(Collectors.toList());
 
         renderTableAndStats(filtered, filtered.isEmpty()

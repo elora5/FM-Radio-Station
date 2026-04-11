@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.fmradiostation.Elora.listener.PollsOrContestSceneController">
    <children>
@@ -15,14 +15,15 @@
             <Font size="21.0" />
          </font>
       </Label>
-      <Label layoutX="66.0" layoutY="80.0" text="Polls / Contest Title" />
-      <TextField fx:id="pollsContestTitleTextField" layoutX="220.0" layoutY="76.0" prefHeight="26.0" prefWidth="293.0" />
-      <Label layoutX="66.0" layoutY="139.0" text="Polls / Contest Description" />
-      <TextField fx:id="pollsContestDescriptionTextField" layoutX="220.0" layoutY="112.0" prefHeight="70.0" prefWidth="293.0" />
-      <RadioButton fx:id="yesRadioButton" layoutX="233.0" layoutY="208.0" mnemonicParsing="false" text="Yes" />
-      <RadioButton fx:id="noRadioButton" layoutX="346.0" layoutY="208.0" mnemonicParsing="false" text="No" />
+      <Label layoutX="66.0" layoutY="109.0" text="Polls / Contest Title" />
+      <TextField fx:id="pollsContestTitleTextField" layoutX="220.0" layoutY="105.0" prefHeight="26.0" prefWidth="293.0" />
+      <Label layoutX="66.0" layoutY="168.0" text="Polls / Contest Description" />
+      <TextField fx:id="pollsContestDescriptionTextField" layoutX="220.0" layoutY="141.0" prefHeight="70.0" prefWidth="293.0" />
+      <RadioButton fx:id="yesRadioButton" layoutX="233.0" layoutY="237.0" mnemonicParsing="false" text="Yes" />
+      <RadioButton fx:id="noRadioButton" layoutX="346.0" layoutY="237.0" mnemonicParsing="false" text="No" />
       <Button layoutX="28.0" layoutY="27.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="Back" />
-      <Button layoutX="273.0" layoutY="269.0" mnemonicParsing="false" onAction="#submitButtonOnClick" text="Submit" />
-      <Label layoutX="66.0" layoutY="208.0" text="Polls / Contest Response" />
+      <Button layoutX="273.0" layoutY="298.0" mnemonicParsing="false" onAction="#submitButtonOnClick" text="Submit" />
+      <Label layoutX="66.0" layoutY="237.0" text="Polls / Contest Response" />
+      <ComboBox fx:id="radioStationComboBox" layoutX="225.0" layoutY="66.0" prefWidth="150.0" promptText="Station List" />
    </children>
 </AnchorPane>

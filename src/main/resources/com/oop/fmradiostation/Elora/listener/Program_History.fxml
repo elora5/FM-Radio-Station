@@ -39,11 +39,9 @@
 
                 <DatePicker fx:id="fromDatePicker" layoutX="350.0" layoutY="45.0" prefHeight="30.0" prefWidth="140.0" style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <DatePicker fx:id="toDatePicker" layoutX="505.0" layoutY="45.0" prefHeight="30.0" prefWidth="140.0" style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
+                <Button layoutX="569.0" layoutY="45.0" onAction="#searchButtonOnClick" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #ec5f9e; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="🔍 Search" />
 
-                <Button layoutX="665.0" layoutY="45.0" onAction="#searchButtonOnClick" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #ec5f9e; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="🔍 Search" />
-
-                <Button layoutX="760.0" layoutY="45.0" onAction="#clearButtonOnClick" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #f78fb3; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="🧹 Clear" />
+                <Button layoutX="664.0" layoutY="45.0" onAction="#clearButtonOnClick" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #f78fb3; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="🧹 Clear" />
 
             </children>
         </AnchorPane>
