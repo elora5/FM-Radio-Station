@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.fmradiostation.Elora.finance_officer.ManageExpenseRequestSceneController">
    <children>
       <Label layoutX="206.0" layoutY="14.0" prefHeight="27.0" prefWidth="163.0" text="Expense Approval">
@@ -28,7 +27,7 @@
       </TableView>
       <Button layoutX="153.0" layoutY="311.0" mnemonicParsing="false" onAction="#rejectButtonOnClick" text="Reject" />
       <Button layoutX="339.0" layoutY="312.0" mnemonicParsing="false" onAction="#approveButton" text="Approve" />
-      <Button layoutX="14.0" layoutY="16.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="Back" />
       <TextArea fx:id="messageTextField" layoutX="179.0" layoutY="357.0" prefHeight="17.0" prefWidth="200.0" />
       <Label layoutX="249.0" layoutY="338.0" text="Message" />
    </children>

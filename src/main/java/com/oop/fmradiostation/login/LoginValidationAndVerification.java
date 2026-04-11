@@ -6,10 +6,8 @@ public class LoginValidationAndVerification {
             return false;
         }
         if (emailOrId.contains("@") && emailOrId.contains(".")) {
-            // The input is an email
             return true;
         } else {
-            // The input is an ID
             return !emailOrId.trim().isEmpty();
         }
     }
