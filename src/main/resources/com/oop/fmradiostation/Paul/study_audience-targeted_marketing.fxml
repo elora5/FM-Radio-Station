@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="476.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group_27.fm_radio_station.StudyAudienceTargetedMarketing">
+   <children>
+      <Label layoutX="162.0" layoutY="27.0" prefHeight="34.0" prefWidth="234.0" text="    Study audience and targeted marketing " />
+      <PieChart layoutX="38.0" layoutY="120.0" prefHeight="177.0" prefWidth="200.0" />
+      <BarChart layoutX="279.0" layoutY="123.0" prefHeight="198.0" prefWidth="294.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Label layoutX="64.0" layoutY="78.0" text="Age Segmentation " />
+      <Label layoutX="343.0" layoutY="78.0" text="Listening Patterns by Time Slot " />
+      <Label layoutX="52.0" layoutY="312.0" prefHeight="18.0" prefWidth="138.0" text="  Select Target Segments" />
+      <CheckBox layoutX="38.0" layoutY="359.0" mnemonicParsing="false" text="Gen-Z ( 18-24)" />
+      <CheckBox layoutX="174.0" layoutY="359.0" mnemonicParsing="false" text="Millennials ( 25-40 )" />
+      <CheckBox layoutX="317.0" layoutY="359.0" mnemonicParsing="false" text="Late Night Listeners" />
+      <CheckBox layoutX="457.0" layoutY="359.0" mnemonicParsing="false" text=" Car Drive Time " />
+      <Label layoutX="13.0" layoutY="417.0" text="Save Segment Group  Name : " />
+      <TextField layoutX="174.0" layoutY="413.0" />
+      <Button layoutX="419.0" layoutY="413.0" mnemonicParsing="false" text="Save Selected Segments" />
+   </children>
+</AnchorPane>

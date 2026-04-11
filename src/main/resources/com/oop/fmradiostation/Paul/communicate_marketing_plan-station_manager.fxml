@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="502.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group_27.fm_radio_station.CommunicateMarketingPlanStationManager">
+   <children>
+      <Label layoutX="204.0" layoutY="24.0" prefHeight="35.0" prefWidth="286.0" text="Communication marketing plan with station manager " />
+      <Label layoutX="123.0" layoutY="83.0" prefHeight="26.0" prefWidth="102.0" text="  Plan Summary" />
+      <Label layoutX="50.0" layoutY="109.0" prefHeight="26.0" prefWidth="63.0" text="Recipient :" />
+      <TextField layoutX="113.0" layoutY="110.0" />
+      <Label layoutX="50.0" layoutY="145.0" prefHeight="26.0" prefWidth="63.0" text="  Subject :" />
+      <TextField layoutX="114.0" layoutY="146.0" />
+      <Label layoutX="31.0" layoutY="194.0" prefHeight="26.0" prefWidth="76.0" text=" Plan Details:" />
+      <TextArea layoutX="113.0" layoutY="178.0" prefHeight="59.0" prefWidth="595.0" />
+      <Button layoutX="43.0" layoutY="245.0" mnemonicParsing="false" text="Attach Marketing Assets" />
+      <Label layoutX="204.0" layoutY="244.0" prefHeight="26.0" prefWidth="102.0" text="   No file attached " />
+      <Button layoutX="543.0" layoutY="288.0" mnemonicParsing="false" text="Send plan to manager" />
+      <Label layoutX="37.0" layoutY="314.0" prefHeight="26.0" prefWidth="124.0" text="Communication Log" />
+      <ListView layoutX="16.0" layoutY="340.0" prefHeight="59.0" prefWidth="677.0" />
+      <Label layoutX="25.0" layoutY="446.0" prefHeight="26.0" prefWidth="50.0" text="Status : " />
+      <TextField layoutX="69.0" layoutY="447.0" text=" Sent Successfully" />
+   </children>
+</AnchorPane>
