@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane prefHeight="491.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group_27.fm_radio_station.RjAllocationRoster">
+   <children>
+      <Label layoutX="41.0" layoutY="7.0" prefHeight="32.0" prefWidth="186.0" text="          RJ Allocation &amp; Roster" />
+      <Label layoutX="53.0" layoutY="48.0" prefHeight="32.0" prefWidth="175.0" text="   Active Programs Requiring RJ  " />
+      <TableView fx:id="activeProgramsTable" layoutX="41.0" layoutY="105.0" prefHeight="152.0" prefWidth="528.0">
+          <columns>
+              <TableColumn prefWidth="118.4000244140625" text="Time Slot" />
+              <TableColumn prefWidth="140.79998779296875" text="Program Title" />
+              <TableColumn prefWidth="122.40008544921875" text="Assigned RJ" />
+              <TableColumn prefWidth="146.39996337890625" text="Assignment Status" />
+          </columns>
+      </TableView>
+      <Label layoutX="41.0" layoutY="271.0" prefHeight="32.0" prefWidth="146.0" text="         Select Radio Jockey" />
+      <ComboBox fx:id="rjCombobox" layoutX="66.0" layoutY="312.0" prefWidth="150.0" promptText="RJ ComboBox" />
+      <Label fx:id="availabilityLabel" layoutX="67.0" layoutY="355.0" prefHeight="32.0" prefWidth="146.0" text="Availability Lavel " />
+      <Button layoutX="66.0" layoutY="400.0" mnemonicParsing="false" onAction="#handleAssignToProgram" text="Assign to Program" />
+      <Label fx:id="statusLabel" layoutX="401.0" layoutY="404.0" text="Assigned Successfull " />
+   </children>
+</AnchorPane>
