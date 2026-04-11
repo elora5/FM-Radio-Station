@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="540.0" prefWidth="820.0"
+            style="-fx-background-color: linear-gradient(to bottom right, #ffe6f0, #fff5f8);"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.oop.fmradiostation.Elora.listener.CreateandEditprofileController">
+
+    <children>
+
+        <Label layoutX="255.0" layoutY="18.0" text="👤 Create  Edit Profile"
+               style="-fx-text-fill: #b03060; -fx-font-weight: bold;">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Label>
+
+        <AnchorPane layoutX="20.0" layoutY="60.0" prefHeight="430.0" prefWidth="780.0"
+                    style="-fx-background-color: white; -fx-border-color: #f4a6c1; -fx-border-width: 2; -fx-border-radius: 16; -fx-background-radius: 16;">
+            <children>
+
+                <Label layoutX="25.0" layoutY="18.0" text="💖 Listener Profile Information"
+                       style="-fx-text-fill: #c2185b; -fx-font-weight: bold;">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+
+                <Separator layoutX="20.0" layoutY="48.0" prefWidth="735.0"/>
+
+                <Label layoutX="35.0" layoutY="72.0" text="🆔 Profile ID:"
+                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
+                <TextField fx:id="profileIdTextField" layoutX="160.0" layoutY="67.0" prefHeight="30.0" prefWidth="200.0"
+                           promptText="Enter profile ID"
+                           style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+
+                <Label layoutX="405.0" layoutY="72.0" text="🙍 Full Name:"
+                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
+                <TextField fx:id="fullNameTextField" layoutX="525.0" layoutY="67.0" prefHeight="30.0" prefWidth="210.0"
+                           promptText="Enter full name"
+                           style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+
+                <Label layoutX="35.0" layoutY="122.0" text="📧 Email:"
+                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
+                <TextField fx:id="emailTextField" layoutX="160.0" layoutY="117.0" prefHeight="30.0" prefWidth="200.0"
+                           promptText="Enter email"
+                           style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+
+                <Label layoutX="405.0" layoutY="122.0" text="📱 Phone:"
+                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
+                <TextField fx:id="phoneTextField" layoutX="525.0" layoutY="117.0" prefHeight="30.0" prefWidth="210.0"
+                           promptText="Enter phone number"
+                           style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+
+                <Label layoutX="35.0" layoutY="172.0" text="🎂 Date of Birth:"
+                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
+                <DatePicker fx:id="dobDatePicker" layoutX="160.0" layoutY="167.0" prefHeight="30.0" prefWidth="200.0"
+                            style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+
+                <Label layoutX="405.0" layoutY="172.0" text="⚧ Gender:"
+                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
+                <ComboBox fx:id="genderComboBox" layoutX="525.0" layoutY="167.0" prefHeight="30.0" prefWidth="210.0"
+                          promptText="Select gender"
+                          style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+
+                <Label layoutX="35.0" layoutY="222.0" text="🏠 Address:"
+                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
+                <TextArea fx:id="addressTextArea" layoutX="160.0" layoutY="217.0" prefHeight="65.0" prefWidth="575.0"
+                          promptText="Enter address"
+                          style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+
+                <Label layoutX="35.0" layoutY="305.0" text="🎵 Favorite Genre:"
+                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
+                <ComboBox fx:id="favoriteGenreComboBox" layoutX="160.0" layoutY="300.0" prefHeight="30.0" prefWidth="200.0"
+                          promptText="Select genre"
+                          style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+
+                <Label layoutX="405.0" layoutY="305.0" text="📻 Listener Type:"
+                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
+                <RadioButton fx:id="regularRadioButton" layoutX="525.0" layoutY="305.0" text="Regular"
+                             style="-fx-text-fill: #7a294f;"/>
+                <RadioButton fx:id="premiumRadioButton" layoutX="620.0" layoutY="305.0" text="Premium"
+                             style="-fx-text-fill: #7a294f;"/>
+
+                <Label layoutX="35.0" layoutY="352.0" text="✨ Interests:"
+                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
+                <CheckBox fx:id="musicCheckBox" layoutX="160.0" layoutY="352.0" text="Music"
+                          style="-fx-text-fill: #7a294f;"/>
+                <CheckBox fx:id="newsCheckBox" layoutX="240.0" layoutY="352.0" text="News"
+                          style="-fx-text-fill: #7a294f;"/>
+                <CheckBox fx:id="sportsCheckBox" layoutX="315.0" layoutY="352.0" text="Sports"
+                          style="-fx-text-fill: #7a294f;"/>
+                <CheckBox fx:id="talkShowCheckBox" layoutX="395.0" layoutY="352.0" text="Talk Show"
+                          style="-fx-text-fill: #7a294f;"/>
+
+                <Button fx:id="loadButton" layoutX="135.0" layoutY="390.0" prefHeight="32.0" prefWidth="90.0" text="📂 Load"
+                        style="-fx-background-color: #f8a5c2; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+
+                <Button fx:id="saveButton" layoutX="255.0" layoutY="390.0" prefHeight="32.0" prefWidth="90.0" text="💾 Save"
+                        style="-fx-background-color: #ec5f9e; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+
+                <Button fx:id="updateButton" layoutX="375.0" layoutY="390.0" prefHeight="32.0" prefWidth="100.0" text="✏ Update"
+                        style="-fx-background-color: #d63384; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+
+                <Button fx:id="clearButton" layoutX="505.0" layoutY="390.0" prefHeight="32.0" prefWidth="90.0" text="🧹 Clear"
+                        style="-fx-background-color: #f78fb3; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+
+                <Button fx:id="backButton" layoutX="625.0" layoutY="390.0" prefHeight="32.0" prefWidth="90.0" text="⬅ Back"
+                        style="-fx-background-color: #c44569; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+
+            </children>
+        </AnchorPane>
+
+    </children>
+</AnchorPane>
