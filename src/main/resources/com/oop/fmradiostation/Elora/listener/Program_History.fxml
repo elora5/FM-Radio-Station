@@ -1,81 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="560.0" prefWidth="900.0"
-            style="-fx-background-color: linear-gradient(to bottom right, #ffe8f1, #fff8fc);"
-            xmlns="http://javafx.com/javafx/17"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.oop.fmradiostation.Elora.listener.ProgramHistoryController">
+<AnchorPane prefHeight="560.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom right, #ffe8f1, #fff8fc);" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.fmradiostation.Elora.listener.ProgramHistoryController">
 
     <children>
 
 
-        <Label layoutX="325.0" layoutY="15.0" text="📻 Program History"
-               style="-fx-text-fill: #b03060; -fx-font-weight: bold;">
+        <Label layoutX="325.0" layoutY="15.0" style="-fx-text-fill: #b03060; -fx-font-weight: bold;" text="📻 Program History">
             <font>
-                <Font size="26.0"/>
+                <Font size="26.0" />
             </font>
         </Label>
 
 
-        <AnchorPane layoutX="20.0" layoutY="55.0" prefHeight="95.0" prefWidth="860.0"
-                    style="-fx-background-color: white; -fx-border-color: #f4a6c1; -fx-border-width: 2; -fx-border-radius: 16; -fx-background-radius: 16;">
+        <AnchorPane layoutX="20.0" layoutY="55.0" prefHeight="95.0" prefWidth="860.0" style="-fx-background-color: white; -fx-border-color: #f4a6c1; -fx-border-width: 2; -fx-border-radius: 16; -fx-background-radius: 16;">
             <children>
 
-                <Label layoutX="20.0" layoutY="15.0" text="🔎 Search History"
-                       style="-fx-text-fill: #c2185b; -fx-font-weight: bold;">
+                <Label layoutX="20.0" layoutY="15.0" style="-fx-text-fill: #c2185b; -fx-font-weight: bold;" text="🔎 Search History">
                     <font>
-                        <Font size="17.0"/>
+                        <Font size="17.0" />
                     </font>
                 </Label>
 
-                <TextField fx:id="searchProgramTextField" layoutX="20.0" layoutY="45.0" prefHeight="30.0" prefWidth="170.0"
-                           promptText="Program name"
-                           style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                <TextField fx:id="searchProgramTextField" layoutX="20.0" layoutY="45.0" prefHeight="30.0" prefWidth="170.0" promptText="Program name" style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <ComboBox fx:id="categoryComboBox" layoutX="205.0" layoutY="45.0" prefHeight="30.0" prefWidth="130.0"
-                          promptText="Category"
-                          style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                <ComboBox fx:id="categoryComboBox" layoutX="205.0" layoutY="45.0" prefHeight="30.0" prefWidth="130.0" promptText="Category" style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <DatePicker fx:id="fromDatePicker" layoutX="350.0" layoutY="45.0" prefHeight="30.0" prefWidth="140.0"
-                            style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                <DatePicker fx:id="fromDatePicker" layoutX="350.0" layoutY="45.0" prefHeight="30.0" prefWidth="140.0" style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <DatePicker fx:id="toDatePicker" layoutX="505.0" layoutY="45.0" prefHeight="30.0" prefWidth="140.0"
-                            style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                <DatePicker fx:id="toDatePicker" layoutX="505.0" layoutY="45.0" prefHeight="30.0" prefWidth="140.0" style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <Button fx:id="searchButton" layoutX="665.0" layoutY="45.0" prefHeight="30.0" prefWidth="80.0" text="🔍 Search"
-                        style="-fx-background-color: #ec5f9e; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button layoutX="665.0" layoutY="45.0" onAction="#searchButtonOnClick" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #ec5f9e; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="🔍 Search" />
 
-                <Button fx:id="clearButton" layoutX="760.0" layoutY="45.0" prefHeight="30.0" prefWidth="80.0" text="🧹 Clear"
-                        style="-fx-background-color: #f78fb3; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button layoutX="760.0" layoutY="45.0" onAction="#clearButtonOnClick" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #f78fb3; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="🧹 Clear" />
 
             </children>
         </AnchorPane>
 
 
-        <AnchorPane layoutX="20.0" layoutY="165.0" prefHeight="305.0" prefWidth="530.0"
-                    style="-fx-background-color: white; -fx-border-color: #f4a6c1; -fx-border-width: 2; -fx-border-radius: 18; -fx-background-radius: 18;">
+        <AnchorPane layoutX="20.0" layoutY="165.0" prefHeight="305.0" prefWidth="530.0" style="-fx-background-color: white; -fx-border-color: #f4a6c1; -fx-border-width: 2; -fx-border-radius: 18; -fx-background-radius: 18;">
             <children>
 
-                <Label layoutX="20.0" layoutY="15.0" text="🗂 Previously Played Programs"
-                       style="-fx-text-fill: #c2185b; -fx-font-weight: bold;">
+                <Label layoutX="20.0" layoutY="15.0" style="-fx-text-fill: #c2185b; -fx-font-weight: bold;" text="🗂 Previously Played Programs">
                     <font>
-                        <Font size="18.0"/>
+                        <Font size="18.0" />
                     </font>
                 </Label>
 
-                <Separator layoutX="18.0" layoutY="45.0" prefWidth="490.0"/>
+                <Separator layoutX="18.0" layoutY="45.0" prefWidth="490.0" />
 
                 <TableView fx:id="programHistoryTableView" layoutX="20.0" layoutY="60.0" prefHeight="225.0" prefWidth="490.0">
                     <columns>
-                        <TableColumn fx:id="programIdColumn" prefWidth="70.0" text="ID"/>
-                        <TableColumn fx:id="programNameColumn" prefWidth="130.0" text="Program"/>
-                        <TableColumn fx:id="categoryColumn" prefWidth="90.0" text="Category"/>
-                        <TableColumn fx:id="airDateColumn" prefWidth="95.0" text="Air Date"/>
-                        <TableColumn fx:id="timeColumn" prefWidth="95.0" text="Time"/>
+                        <TableColumn fx:id="programIdColumn" prefWidth="70.0" text="ID" />
+                        <TableColumn fx:id="programNameColumn" prefWidth="130.0" text="Program" />
+                        <TableColumn fx:id="categoryColumn" prefWidth="90.0" text="Category" />
+                        <TableColumn fx:id="airDateColumn" prefWidth="95.0" text="Air Date" />
+                        <TableColumn fx:id="timeColumn" prefWidth="95.0" text="Time" />
                     </columns>
                 </TableView>
 
@@ -83,81 +74,52 @@
         </AnchorPane>
 
 
-        <AnchorPane layoutX="570.0" layoutY="165.0" prefHeight="305.0" prefWidth="310.0"
-                    style="-fx-background-color: white; -fx-border-color: #f4a6c1; -fx-border-width: 2; -fx-border-radius: 22; -fx-background-radius: 22;">
+        <AnchorPane layoutX="570.0" layoutY="165.0" prefHeight="305.0" prefWidth="310.0" style="-fx-background-color: white; -fx-border-color: #f4a6c1; -fx-border-width: 2; -fx-border-radius: 22; -fx-background-radius: 22;">
             <children>
 
-                <Label layoutX="22.0" layoutY="18.0" text="🌸 Selected Program Details"
-                       style="-fx-text-fill: #c2185b; -fx-font-weight: bold;">
+                <Label layoutX="22.0" layoutY="18.0" style="-fx-text-fill: #c2185b; -fx-font-weight: bold;" text="🌸 Selected Program Details">
                     <font>
-                        <Font size="17.0"/>
+                        <Font size="17.0" />
                     </font>
                 </Label>
 
-                <Separator layoutX="18.0" layoutY="48.0" prefWidth="270.0"/>
+                <Separator layoutX="18.0" layoutY="48.0" prefWidth="270.0" />
 
-                <Label layoutX="20.0" layoutY="68.0" text="📌 Program Name:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <TextField fx:id="programNameField" layoutX="140.0" layoutY="63.0" prefHeight="30.0" prefWidth="145.0"
-                           editable="false"
-                           style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                <Label layoutX="20.0" layoutY="68.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="📌 Program Name:" />
+                <TextField fx:id="programNameField" editable="false" layoutX="140.0" layoutY="63.0" prefHeight="30.0" prefWidth="145.0" style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <Label layoutX="20.0" layoutY="108.0" text="🎙 Host Name:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <TextField fx:id="hostNameField" layoutX="140.0" layoutY="103.0" prefHeight="30.0" prefWidth="145.0"
-                           editable="false"
-                           style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                <Label layoutX="20.0" layoutY="108.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="🎙 Host Name:" />
+                <TextField fx:id="hostNameField" editable="false" layoutX="140.0" layoutY="103.0" prefHeight="30.0" prefWidth="145.0" style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <Label layoutX="20.0" layoutY="148.0" text="🕒 Duration:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <TextField fx:id="durationField" layoutX="140.0" layoutY="143.0" prefHeight="30.0" prefWidth="145.0"
-                           editable="false"
-                           style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                <Label layoutX="20.0" layoutY="148.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="🕒 Duration:" />
+                <TextField fx:id="durationField" editable="false" layoutX="140.0" layoutY="143.0" prefHeight="30.0" prefWidth="145.0" style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <Label layoutX="20.0" layoutY="188.0" text="⭐ Rating:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <TextField fx:id="ratingField" layoutX="140.0" layoutY="183.0" prefHeight="30.0" prefWidth="145.0"
-                           editable="false"
-                           style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                <Label layoutX="20.0" layoutY="188.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="⭐ Rating:" />
+                <TextField fx:id="ratingField" editable="false" layoutX="140.0" layoutY="183.0" prefHeight="30.0" prefWidth="145.0" style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <Label layoutX="20.0" layoutY="228.0" text="📝 Summary:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <TextArea fx:id="summaryTextArea" layoutX="20.0" layoutY="253.0" prefHeight="38.0" prefWidth="265.0"
-                          editable="false"
-                          promptText="Program summary..."
-                          style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 10; -fx-background-radius: 10;"/>
+                <Label layoutX="20.0" layoutY="228.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="📝 Summary:" />
+                <TextArea fx:id="summaryTextArea" editable="false" layoutX="20.0" layoutY="253.0" prefHeight="38.0" prefWidth="265.0" promptText="Program summary..." style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 10; -fx-background-radius: 10;" />
 
             </children>
         </AnchorPane>
 
 
-        <AnchorPane layoutX="20.0" layoutY="485.0" prefHeight="60.0" prefWidth="860.0"
-                    style="-fx-background-color: white; -fx-border-color: #f4a6c1; -fx-border-width: 2; -fx-border-radius: 18; -fx-background-radius: 18;">
+        <AnchorPane layoutX="20.0" layoutY="485.0" prefHeight="60.0" prefWidth="860.0" style="-fx-background-color: white; -fx-border-color: #f4a6c1; -fx-border-width: 2; -fx-border-radius: 18; -fx-background-radius: 18;">
             <children>
 
-                <Label layoutX="20.0" layoutY="21.0" text="📊 Total Programs:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <TextField fx:id="totalProgramsTextField" layoutX="130.0" layoutY="15.0" prefHeight="30.0" prefWidth="80.0"
-                           editable="false"
-                           style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1;"/>
+                <Label layoutX="20.0" layoutY="21.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="📊 Total Programs:" />
+                <TextField fx:id="totalProgramsTextField" editable="false" layoutX="130.0" layoutY="15.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1;" />
 
-                <Label layoutX="235.0" layoutY="21.0" text="🎧 Favorite Type:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <TextField fx:id="favoriteTypeTextField" layoutX="335.0" layoutY="15.0" prefHeight="30.0" prefWidth="120.0"
-                           editable="false"
-                           style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1;"/>
+                <Label layoutX="235.0" layoutY="21.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="🎧 Favorite Type:" />
+                <TextField fx:id="favoriteTypeTextField" editable="false" layoutX="335.0" layoutY="15.0" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1;" />
 
-                <Button fx:id="loadButton" layoutX="520.0" layoutY="15.0" prefHeight="30.0" prefWidth="80.0" text="📂 Load"
-                        style="-fx-background-color: #f8a5c2; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button layoutX="520.0" layoutY="15.0" onAction="#loadButtonOnClick" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #f8a5c2; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="📂 Load" />
 
-                <Button fx:id="exportButton" layoutX="615.0" layoutY="15.0" prefHeight="30.0" prefWidth="90.0" text="💾 Export"
-                        style="-fx-background-color: #ec5f9e; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button layoutX="615.0" layoutY="15.0" onAction="#exportButtonOnClick" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #ec5f9e; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="💾 Export" />
 
-                <Button fx:id="viewButton" layoutX="720.0" layoutY="15.0" prefHeight="30.0" prefWidth="70.0" text="👁 View"
-                        style="-fx-background-color: #d63384; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button layoutX="720.0" layoutY="15.0" onAction="#viewButtonOnClick" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #d63384; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="👁 View" />
 
-                <Button fx:id="backButton" layoutX="805.0" layoutY="15.0" prefHeight="30.0" prefWidth="40.0" text="⬅"
-                        style="-fx-background-color: #c44569; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button layoutX="794.0" layoutY="15.0" onAction="#backButtonOnclick" prefHeight="30.0" prefWidth="51.0" style="-fx-background-color: #c44569; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="Back" />
 
             </children>
         </AnchorPane>

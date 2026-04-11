@@ -1,145 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="560.0" prefWidth="860.0"
-            style="-fx-background-color: linear-gradient(to bottom right, #ffe4ee, #fff8fb);"
-            xmlns="http://javafx.com/javafx/17"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.oop.fmradiostation.Elora.listener.RateShowFeedbackController">
+<AnchorPane prefHeight="560.0" prefWidth="860.0" style="-fx-background-color: linear-gradient(to bottom right, #ffe4ee, #fff8fb);" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.fmradiostation.Elora.listener.RateShowFeedbackController">
 
     <children>
 
-        <Label layoutX="290.0" layoutY="15.0" text="⭐ Rate Show Feedback"
-               style="-fx-text-fill: #b03060; -fx-font-weight: bold;">
+        <Label layoutX="290.0" layoutY="15.0" style="-fx-text-fill: #b03060; -fx-font-weight: bold;" text="⭐ Rate Show Feedback">
             <font>
-                <Font size="25.0"/>
+                <Font size="25.0" />
             </font>
         </Label>
 
 
-        <AnchorPane layoutX="20.0" layoutY="55.0" prefHeight="480.0" prefWidth="380.0"
-                    style="-fx-background-color: white; -fx-border-color: #f4a6c1; -fx-border-width: 2; -fx-border-radius: 18; -fx-background-radius: 18;">
+        <AnchorPane layoutX="20.0" layoutY="55.0" prefHeight="480.0" prefWidth="380.0" style="-fx-background-color: white; -fx-border-color: #f4a6c1; -fx-border-width: 2; -fx-border-radius: 18; -fx-background-radius: 18;">
             <children>
 
-                <Label layoutX="20.0" layoutY="18.0" text="🎙 Share Your Review"
-                       style="-fx-text-fill: #c2185b; -fx-font-weight: bold;">
+                <Label layoutX="20.0" layoutY="18.0" style="-fx-text-fill: #c2185b; -fx-font-weight: bold;" text="🎙 Share Your Review">
                     <font>
-                        <Font size="18.0"/>
+                        <Font size="18.0" />
                     </font>
                 </Label>
 
-                <Separator layoutX="18.0" layoutY="48.0" prefWidth="340.0"/>
+                <Separator layoutX="18.0" layoutY="48.0" prefWidth="340.0" />
 
-                <Label layoutX="25.0" layoutY="68.0" text="🆔 Feedback ID:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <TextField fx:id="feedbackIdTextField" layoutX="145.0" layoutY="63.0" prefHeight="30.0" prefWidth="200.0"
-                           promptText="Enter feedback ID"
-                           style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                <Label layoutX="25.0" layoutY="68.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="🆔 Feedback ID:" />
+                <TextField fx:id="feedbackIdTextField" layoutX="145.0" layoutY="63.0" prefHeight="30.0" prefWidth="200.0" promptText="Enter feedback ID" style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <Label layoutX="25.0" layoutY="113.0" text="📻 Select Show:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <ComboBox fx:id="showComboBox" layoutX="145.0" layoutY="108.0" prefHeight="30.0" prefWidth="200.0"
-                          promptText="Choose a show"
-                          style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                <Label layoutX="25.0" layoutY="113.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="📻 Select Show:" />
+                <ComboBox fx:id="showComboBox" layoutX="145.0" layoutY="108.0" prefHeight="30.0" prefWidth="200.0" promptText="Choose a show" style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <Label layoutX="25.0" layoutY="158.0" text="📅 Review Date:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <DatePicker fx:id="reviewDatePicker" layoutX="145.0" layoutY="153.0" prefHeight="30.0" prefWidth="200.0"
-                            style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                <Label layoutX="25.0" layoutY="158.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="📅 Review Date:" />
+                <DatePicker fx:id="reviewDatePicker" layoutX="145.0" layoutY="153.0" prefHeight="30.0" prefWidth="200.0" style="-fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <Label layoutX="25.0" layoutY="203.0" text="⭐ Rating:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <RadioButton fx:id="oneStarRadioButton" layoutX="145.0" layoutY="203.0" text="1"
-                             style="-fx-text-fill: #7a294f;"/>
-                <RadioButton fx:id="twoStarRadioButton" layoutX="185.0" layoutY="203.0" text="2"
-                             style="-fx-text-fill: #7a294f;"/>
-                <RadioButton fx:id="threeStarRadioButton" layoutX="225.0" layoutY="203.0" text="3"
-                             style="-fx-text-fill: #7a294f;"/>
-                <RadioButton fx:id="fourStarRadioButton" layoutX="265.0" layoutY="203.0" text="4"
-                             style="-fx-text-fill: #7a294f;"/>
-                <RadioButton fx:id="fiveStarRadioButton" layoutX="305.0" layoutY="203.0" text="5"
-                             style="-fx-text-fill: #7a294f;"/>
+                <Label layoutX="25.0" layoutY="203.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="⭐ Rating:" />
+                <RadioButton fx:id="oneStarRadioButton" layoutX="145.0" layoutY="203.0" style="-fx-text-fill: #7a294f;" text="1" />
+                <RadioButton fx:id="twoStarRadioButton" layoutX="185.0" layoutY="203.0" style="-fx-text-fill: #7a294f;" text="2" />
+                <RadioButton fx:id="threeStarRadioButton" layoutX="225.0" layoutY="203.0" style="-fx-text-fill: #7a294f;" text="3" />
+                <RadioButton fx:id="fourStarRadioButton" layoutX="265.0" layoutY="203.0" style="-fx-text-fill: #7a294f;" text="4" />
+                <RadioButton fx:id="fiveStarRadioButton" layoutX="305.0" layoutY="203.0" style="-fx-text-fill: #7a294f;" text="5" />
 
-                <Label layoutX="25.0" layoutY="248.0" text="💬 Feedback:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <TextArea fx:id="feedbackTextArea" layoutX="145.0" layoutY="243.0" prefHeight="90.0" prefWidth="200.0"
-                          promptText="Write your opinion here..."
-                          style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                <Label layoutX="25.0" layoutY="248.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="💬 Feedback:" />
+                <TextArea fx:id="feedbackTextArea" layoutX="145.0" layoutY="243.0" prefHeight="90.0" prefWidth="200.0" promptText="Write your opinion here..." style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 8; -fx-background-radius: 8;" />
 
-                <Label layoutX="25.0" layoutY="350.0" text="🌸 Tags:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <CheckBox fx:id="entertainingCheckBox" layoutX="145.0" layoutY="350.0" text="Entertaining"
-                          style="-fx-text-fill: #7a294f;"/>
-                <CheckBox fx:id="informativeCheckBox" layoutX="255.0" layoutY="350.0" text="Informative"
-                          style="-fx-text-fill: #7a294f;"/>
-                <CheckBox fx:id="funnyCheckBox" layoutX="145.0" layoutY="378.0" text="Funny"
-                          style="-fx-text-fill: #7a294f;"/>
-                <CheckBox fx:id="boringCheckBox" layoutX="255.0" layoutY="378.0" text="Boring"
-                          style="-fx-text-fill: #7a294f;"/>
+                <Label layoutX="25.0" layoutY="350.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="🌸 Tags:" />
+                <CheckBox fx:id="entertainingCheckBox" layoutX="145.0" layoutY="350.0" style="-fx-text-fill: #7a294f;" text="Entertaining" />
+                <CheckBox fx:id="informativeCheckBox" layoutX="255.0" layoutY="350.0" style="-fx-text-fill: #7a294f;" text="Informative" />
+                <CheckBox fx:id="funnyCheckBox" layoutX="145.0" layoutY="378.0" style="-fx-text-fill: #7a294f;" text="Funny" />
+                <CheckBox fx:id="boringCheckBox" layoutX="255.0" layoutY="378.0" style="-fx-text-fill: #7a294f;" text="Boring" />
 
-                <Label layoutX="25.0" layoutY="418.0" text="👍 Recommend:"
-                       style="-fx-text-fill: #7a294f; -fx-font-weight: bold;"/>
-                <RadioButton fx:id="yesRadioButton" layoutX="145.0" layoutY="418.0" text="Yes"
-                             style="-fx-text-fill: #7a294f;"/>
-                <RadioButton fx:id="noRadioButton" layoutX="215.0" layoutY="418.0" text="No"
-                             style="-fx-text-fill: #7a294f;"/>
+                <Label layoutX="25.0" layoutY="418.0" style="-fx-text-fill: #7a294f; -fx-font-weight: bold;" text="👍 Recommend:" />
+                <RadioButton fx:id="yesRadioButton" layoutX="145.0" layoutY="418.0" style="-fx-text-fill: #7a294f;" text="Yes" />
+                <RadioButton fx:id="noRadioButton" layoutX="215.0" layoutY="418.0" style="-fx-text-fill: #7a294f;" text="No" />
 
             </children>
         </AnchorPane>
 
 
-        <AnchorPane layoutX="420.0" layoutY="55.0" prefHeight="480.0" prefWidth="420.0"
-                    style="-fx-background-color: white; -fx-border-color: #f4a6c1; -fx-border-width: 2; -fx-border-radius: 18; -fx-background-radius: 18;">
+        <AnchorPane layoutX="420.0" layoutY="55.0" prefHeight="480.0" prefWidth="420.0" style="-fx-background-color: white; -fx-border-color: #f4a6c1; -fx-border-width: 2; -fx-border-radius: 18; -fx-background-radius: 18;">
             <children>
 
-                <Label layoutX="20.0" layoutY="18.0" text="📋 Feedback Records"
-                       style="-fx-text-fill: #c2185b; -fx-font-weight: bold;">
+                <Label layoutX="20.0" layoutY="18.0" style="-fx-text-fill: #c2185b; -fx-font-weight: bold;" text="📋 Feedback Records">
                     <font>
-                        <Font size="18.0"/>
+                        <Font size="18.0" />
                     </font>
                 </Label>
 
-                <Separator layoutX="18.0" layoutY="48.0" prefWidth="380.0"/>
+                <Separator layoutX="18.0" layoutY="48.0" prefWidth="380.0" />
 
                 <TableView fx:id="feedbackTableView" layoutX="20.0" layoutY="65.0" prefHeight="220.0" prefWidth="380.0">
                     <columns>
-                        <TableColumn fx:id="feedbackIdColumn" prefWidth="70.0" text="ID"/>
-                        <TableColumn fx:id="showColumn" prefWidth="110.0" text="Show"/>
-                        <TableColumn fx:id="ratingColumn" prefWidth="60.0" text="Rate"/>
-                        <TableColumn fx:id="recommendColumn" prefWidth="80.0" text="Recommend"/>
-                        <TableColumn fx:id="dateColumn" prefWidth="60.0" text="Date"/>
+                        <TableColumn fx:id="feedbackIdColumn" prefWidth="70.0" text="ID" />
+                        <TableColumn fx:id="showColumn" prefWidth="110.0" text="Show" />
+                        <TableColumn fx:id="ratingColumn" prefWidth="60.0" text="Rate" />
+                        <TableColumn fx:id="recommendColumn" prefWidth="80.0" text="Recommend" />
+                        <TableColumn fx:id="dateColumn" prefWidth="60.0" text="Date" />
                     </columns>
                 </TableView>
 
-                <Label layoutX="20.0" layoutY="305.0" text="🪄 Selected Feedback Preview"
-                       style="-fx-text-fill: #c2185b; -fx-font-weight: bold;">
+                <Label layoutX="20.0" layoutY="305.0" style="-fx-text-fill: #c2185b; -fx-font-weight: bold;" text="🪄 Selected Feedback Preview">
                     <font>
-                        <Font size="17.0"/>
+                        <Font size="17.0" />
                     </font>
                 </Label>
 
-                <TextArea fx:id="previewTextArea" layoutX="20.0" layoutY="335.0" prefHeight="75.0" prefWidth="380.0"
-                          editable="false"
-                          promptText="Selected feedback details..."
-                          style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 10; -fx-background-radius: 10;"/>
+                <TextArea fx:id="previewTextArea" editable="false" layoutX="20.0" layoutY="335.0" prefHeight="75.0" prefWidth="380.0" promptText="Selected feedback details..." style="-fx-background-color: #fff8fb; -fx-border-color: #f4a6c1; -fx-border-radius: 10; -fx-background-radius: 10;" />
 
-                <Button fx:id="loadButton" layoutX="20.0" layoutY="430.0" prefHeight="30.0" prefWidth="75.0" text="📂 Load"
-                        style="-fx-background-color: #f8a5c2; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button layoutX="20.0" layoutY="430.0" onAction="#loadButtonOnClick" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #f8a5c2; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="📂 Load" />
 
-                <Button fx:id="saveButton" layoutX="110.0" layoutY="430.0" prefHeight="30.0" prefWidth="75.0" text="💾 Save"
-                        style="-fx-background-color: #ec5f9e; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button layoutX="101.0" layoutY="430.0" onAction="#saveButtonOnClick" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #ec5f9e; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="💾 Save" />
 
-                <Button fx:id="updateButton" layoutX="200.0" layoutY="430.0" prefHeight="30.0" prefWidth="88.0" text="✏ Update"
-                        style="-fx-background-color: #d63384; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button layoutX="183.0" layoutY="430.0" onAction="#updateButtonOnClick" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: #d63384; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="✏ Update" />
 
-                <Button fx:id="clearButton" layoutX="303.0" layoutY="430.0" prefHeight="30.0" prefWidth="75.0" text="🧹 Clear"
-                        style="-fx-background-color: #f78fb3; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button layoutX="277.0" layoutY="430.0" onAction="#clearButtonOnClick" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #f78fb3; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="🧹 Clear" />
 
-                <Button fx:id="backButton" layoutX="390.0" layoutY="430.0" prefHeight="30.0" prefWidth="20.0" text="⬅"
-                        style="-fx-background-color: #c44569; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button layoutX="359.0" layoutY="430.0" onAction="#backButtonOnClick" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #c44569; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="Back" />
 
             </children>
         </AnchorPane>
