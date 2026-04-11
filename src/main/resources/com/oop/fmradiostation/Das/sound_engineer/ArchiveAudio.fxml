@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="680.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.fmradiostation.Das.sound_engineer.ArchiveAudioController">
+    <children>
+
+        <VBox layoutX="30.0" layoutY="80.0" prefHeight="250.0" prefWidth="200.0" spacing="15.0">
+            <children>
+                <Label text="Select an outdated or previously broadcasted file from the list to archive it." wrapText="true" />
+
+                <Button mnemonicParsing="false" onAction="#handleArchive" prefHeight="35.0" prefWidth="200.0" text="Move to Archive">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Label fx:id="statusLabel" textFill="#27ae60" wrapText="true" />
+            </children>
+        </VBox>
+
+        <TableView fx:id="archiveTable" layoutX="250.0" layoutY="80.0" prefHeight="480.0" prefWidth="400.0">
+            <columns>
+                <TableColumn fx:id="idCol" prefWidth="70.0" text="File ID" />
+                <TableColumn fx:id="nameCol" prefWidth="130.0" text="File Name" />
+                <TableColumn fx:id="dateCol" prefWidth="110.0" text="Broadcast Date" />
+                <TableColumn fx:id="statusCol" prefWidth="85.0" text="Status" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

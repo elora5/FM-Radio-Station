@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="680.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.fmradiostation.Das.studio_coordinator.TechCoordinationSCController">
+    <children>
+
+        <VBox alignment="CENTER" layoutX="140.0" layoutY="120.0" prefHeight="300.0" prefWidth="400.0" spacing="25.0" style="-fx-background-color: white; -fx-padding: 30; -fx-background-radius: 10; -fx-border-color: #bdc3c7; -fx-border-radius: 10;">
+            <children>
+                <Label text="Request technical clearance for an upcoming program." textFill="#7f8c8d" />
+
+                <ComboBox fx:id="studioComboBox" prefHeight="35.0" prefWidth="350.0" promptText="Select Studio / Program" />
+
+                <Button mnemonicParsing="false" onAction="#handleSendRequest" prefHeight="45.0" prefWidth="350.0" text="Send Readiness Request to S.E.">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+
+                <VBox alignment="CENTER" spacing="5.0" style="-fx-background-color: #f8f9fa; -fx-padding: 10; -fx-border-color: #ddd; -fx-border-radius: 5;">
+                    <children>
+                        <Label text="Engineer's Status Response:" textFill="#2c3e50">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="responseLabel" text="Pending Request...">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

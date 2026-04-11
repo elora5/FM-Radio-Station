@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="680.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.fmradiostation.Das.sound_engineer.EquipmentTestController">
+    <children>
+        <Label layoutX="30.0" layoutY="25.0" textFill="#2c3e50">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <VBox layoutX="30.0" layoutY="80.0" prefHeight="300.0" prefWidth="220.0" spacing="20.0">
+            <children>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Select Device to Test:" />
+                        <ComboBox fx:id="deviceComboBox" prefWidth="220.0" promptText="Choose a device..." />
+                    </children>
+                </VBox>
+
+                <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5;">
+                    <children>
+                        <Label text="Diagnostic Result:" textFill="#34495e">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <HBox spacing="15.0">
+                            <children>
+                                <RadioButton fx:id="passRadio" mnemonicParsing="false" text="Pass">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="statusGroup" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="failRadio" mnemonicParsing="false" text="Fail " toggleGroup="$statusGroup" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+
+                <Button mnemonicParsing="false" onAction="#handleUpdateStatus" prefHeight="35.0" prefWidth="220.0" text="Update Device Status">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Label fx:id="statusLabel" textFill="#c0392b" wrapText="true" />
+            </children>
+        </VBox>
+
+        <TableView fx:id="deviceTable" layoutX="280.0" layoutY="80.0" prefHeight="480.0" prefWidth="370.0">
+            <columns>
+                <TableColumn fx:id="idCol" prefWidth="70.0" text="Device ID" />
+                <TableColumn fx:id="nameCol" prefWidth="120.0" text="Device Name" />
+                <TableColumn fx:id="typeCol" prefWidth="100.0" text="Type" />
+                <TableColumn fx:id="statusCol" prefWidth="80.0" text="Status" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
